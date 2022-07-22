@@ -1,8 +1,6 @@
 import math
 from numpy import arctan
 from scipy import constants
-import json
-
 
 # I infered that the stike height is always y1 = 0
 
@@ -19,15 +17,10 @@ def calc(v0, alpha, h):
     vy = v0 * math.sin(math.radians(alpha)) - (g * t)
     v = math.sqrt(math.pow(vx, 2) + math.pow(vy, 2))
     alpha1 = arctan(vy / vx)
-    print(vy / vx)
-    output_dict = {
-        "x1": x,
-        "y1": 0,
-        "v1": v,
-        "alpha1": math.degrees(alpha1)
+    output = {
+        'x1': x, 'y1': 0, 'v1': v, 'alpha1': math.degrees(alpha1)
     }
-    output_json = json.dumps(output_dict)
-    return output_json
+    return output
 
 
 if __name__ == "__main__":
