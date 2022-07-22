@@ -19,7 +19,10 @@ def home():
             v0 = float(request.form['v0'])
             alpha = float(request.form['alpha0'])
             h = float(request.form['h0'])
-            output = calc.calc(v0, alpha, h)
+            if v0 <= 0 or alpha < 0 or h < 0:
+                output = "Please fill in all fields correctly"
+            else:
+                output = calc.calc(v0, alpha, h)
             is_string = False
         if type(output) == str:
             is_string = True
@@ -32,6 +35,8 @@ def api():
         v0 = float(request.args.get('v0'))
         alpha0 = float(request.args.get('alpha0'))
         h0 = float(request.args.get('h0'))
+        if v0 <= 0 or alpha0 < 0 or h0 < 0:
+            return jsonify({"error": "Please fill in all fields correctly"})
         return json.dumps(calc.calc(v0, alpha0, h0))
     else:
         return json.dumps(calc.calc(1, 1, 1))
