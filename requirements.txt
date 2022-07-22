@@ -39,7 +39,6 @@ pipwin==0.5.1
 protobuf==3.19.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio @ file:///C:/Users/yossi/pipwin/PyAudio-0.2.11-cp310-cp310-win_amd64.whl
 Pygments==2.8.1
 pyjsparser==2.7.1
 pyparsing==3.0.6
@@ -112,7 +111,6 @@ pipwin==0.5.1
 protobuf==3.19.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio @ file:///C:/Users/yossi/pipwin/PyAudio-0.2.11-cp310-cp310-win_amd64.whl
 Pygments==2.8.1
 pyjsparser==2.7.1
 pyparsing==3.0.6
