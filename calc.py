@@ -18,7 +18,7 @@ def calc(v0, alpha, h):
     v = math.sqrt(math.pow(vx, 2) + math.pow(vy, 2))
     alpha1 = arctan(vy / vx)
     output = {
-        'x1': x, 'y1': 0, 'v1': v, 'alpha1': math.degrees(alpha1)
+        'Hit distance': x, 'Hit height': 0, 'Hit velocity': v, 'Hit angles': math.degrees(alpha1)
     }
     return output
 
