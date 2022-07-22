@@ -21,9 +21,10 @@ def home():
             h = float(request.form['h0'])
             if v0 <= 0 or alpha < 0 or h < 0:
                 output = "Please fill in all fields correctly"
+                is_string = True
             else:
                 output = calc.calc(v0, alpha, h)
-            is_string = False
+                is_string = False
         if type(output) == str:
             is_string = True
         return render_template("index.html", output=output, is_string=is_string)
